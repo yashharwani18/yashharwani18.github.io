@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yash Harwani | The Nocturnal Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400&amp;family=Instrument+Serif:ital@1&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400&family=Instrument+Serif:ital@1&display=swap');
+        body {
+            background-color: #000000;
+            color: #C6C6C6;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 300;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .font-serif-italic {
+            font-family: 'Instrument Serif', serif;
+            font-style: italic;
+        }
+        .liquid-glass {
+            background: rgba(19, 19, 19, 0.4);
+            backdrop-filter: blur(32px) saturate(180%);
+            -webkit-backdrop-filter: blur(32px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+        .liquid-glass::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        .liquid-glass-strong {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(50px) saturate(180%);
+            -webkit-backdrop-filter: blur(50px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-text-glow {
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+        }
+        .desaturated-video {
+            filter: grayscale(1) contrast(1.1) brightness(0.8);
+        }
+        .top-nav-container {
+            position: fixed;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            max-width: 80rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 50;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(48px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 2rem;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
+        :root {
+            --primary: #ffffff;
+            --background: #131313;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffffff",
+                        "secondary-fixed-dim": "#ababab",
+                        "on-tertiary": "#1a1c1c",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "surface-container-low": "#1b1b1b",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-highest": "#353535",
+                        "on-surface-variant": "#c6c6c6",
+                        "outline": "#919191",
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-black text-on-surface-variant">
+<header class="top-nav-container">
+<div class="text-xl font-bold tracking-tighter text-white uppercase">Yash Harwani</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white font-bold border-b border-white/40 font-light tracking-wide text-sm" href="#">Home</a>
+<a class="text-gray-400 font-light hover:text-white transition-colors tracking-wide text-sm" href="#">Services</a>
+<a class="text-gray-400 font-light hover:text-white transition-colors tracking-wide text-sm" href="#">Work</a>
+<a class="text-gray-400 font-light hover:text-white transition-colors tracking-wide text-sm" href="#">Process</a>
+<a class="text-gray-400 font-light hover:text-white transition-colors tracking-wide text-sm" href="#">Pricing</a>
+</nav>
+<button class="bg-white text-black px-6 py-2 rounded-full text-sm font-medium hover:scale-95 transition-transform">
+            Get Started
+        </button>
+</header>
+<main>
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<video autoplay="" class="absolute inset-0 w-full h-full object-cover opacity-50" loop="" muted="" playsinline="">
+<source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4" type="video/mp4"/>
+</video>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+<div class="relative z-10 text-center px-4 max-w-6xl">
+<h1 class="font-serif-italic text-7xl md:text-[10rem] text-white tracking-tighter leading-[0.85] mb-8 hero-text-glow">
+                    The Future Your <br/>Brand Deserves
+                </h1>
+<p class="text-lg md:text-xl font-light text-on-surface-variant max-w-2xl mx-auto mb-12">
+                    Curating high-end AI digital experiences that bridge the gap between technical precision and editorial elegance.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="px-10 py-4 bg-white text-black rounded-full font-medium hover:opacity-90 transition-opacity">
+                        Start a Project
+                    </button>
+<button class="px-10 py-4 liquid-glass rounded-full text-white font-medium hover:bg-white/10 transition-colors">
+                        View Portfolio
+                    </button>
+</div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+<span class="text-xs uppercase tracking-[0.3em]">Scroll</span>
+<span class="material-symbols-outlined animate-bounce">arrow_downward</span>
+</div>
+</section>
+<section class="py-32 bg-black border-y border-white/5">
+<div class="max-w-7xl mx-auto px-8">
+<p class="text-center text-xs uppercase tracking-[0.4em] mb-16 text-outline">Trusted by industry leaders</p>
+<div class="flex flex-col gap-8 opacity-40 grayscale">
+<div class="flex justify-center items-center gap-16 md:gap-32 -translate-x-8">
+<span class="text-3xl font-bold tracking-tighter text-white">Stripe</span>
+<span class="text-3xl font-bold tracking-tighter text-white">Vercel</span>
+<span class="text-3xl font-bold tracking-tighter text-white">Linear</span>
+</div>
+<div class="flex justify-center items-center gap-16 md:gap-32 translate-x-8">
+<span class="text-3xl font-bold tracking-tighter text-white">Notion</span>
+<span class="text-3xl font-bold tracking-tighter text-white">Figma</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-black overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div>
+<h2 class="font-serif-italic text-5xl md:text-7xl text-white mb-12 leading-tight">
+                        Crafting digital <br/>souls from data.
+                    </h2>
+<div class="space-y-12">
+<div class="group">
+<span class="text-sm font-bold text-white/40 group-hover:text-white transition-colors">01</span>
+<h3 class="text-2xl text-white mt-2 mb-4">Discovery &amp; Curation</h3>
+<p class="text-on-surface-variant font-light">Deep diving into your brand's core values to architect an AI strategy that resonates emotionally.</p>
+</div>
+<div class="group">
+<span class="text-sm font-bold text-white/40 group-hover:text-white transition-colors">02</span>
+<h3 class="text-2xl text-white mt-2 mb-4">Liquid Architecture</h3>
+<p class="text-on-surface-variant font-light">Building fluid, adaptive interfaces that leverage "Liquid Glass" aesthetics and state-of-the-art LLMs.</p>
+</div>
+<div class="group">
+<span class="text-sm font-bold text-white/40 group-hover:text-white transition-colors">03</span>
+<h3 class="text-2xl text-white mt-2 mb-4">Iterative Refinement</h3>
+<p class="text-on-surface-variant font-light">Polishing every interaction until the interface feels less like software and more like a high-end service.</p>
+</div>
+</div>
+</div>
+<div class="relative aspect-square rounded-lg overflow-hidden liquid-glass">
+<video autoplay="" class="w-full h-full object-cover" loop="" muted="" playsinline="">
+<source src="https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A/medium.mp4" type="video/mp4"/>
+</video>
+</div>
+</div>
+</section>
+<section class="bg-black">
+<div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+<div class="w-full h-full overflow-hidden">
+<div class="aspect-[16/10] lg:aspect-auto lg:h-[819px] bg-surface-container-low transition-transform duration-1000 hover:scale-105">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY0L1TacMn9iymzDhApk2iI2UV8CjYwypG6MgBAASMnRDutyduzUYUb7UwawkcSUf3P8McRgAynusMGWYNzWQ3h1CbN90718Gg3tz9BkoWTPy_2TCrUx68qV4l93qkRPiuv94AIfSEcyYNLr3FqrMWt28AuBoOscrciCOZl6S6NObUi-DCjl7lGb9z2RQC_piGZRnH4iNZYIutrvr1Z5AnEfHxRh43hNtu_F6lO_o2fTGG_srAAgUiALQAMVBcEohp9gKTHkp1-yM"/>
+</div>
+</div>
+<div class="p-12 md:p-24 lg:p-32">
+<div class="flex gap-4 mb-6">
+<span class="px-3 py-1 liquid-glass rounded-full text-[10px] uppercase tracking-widest text-white">Gen AI</span>
+<span class="px-3 py-1 liquid-glass rounded-full text-[10px] uppercase tracking-widest text-white">Design System</span>
+</div>
+<h3 class="font-serif-italic text-5xl text-white mb-6 italic">Aura Intelligence</h3>
+<p class="text-on-surface-variant font-light mb-8 text-lg leading-relaxed max-w-md">
+                        A bespoke AI assistant for high-end fashion brands, providing an editorial-first customer experience through semantic search and stylistic analysis.
+                    </p>
+<button class="flex items-center gap-2 text-white group">
+<span class="text-sm font-medium tracking-widest uppercase border-b border-white/20 pb-1">Explore Case Study</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+<div class="order-2 lg:order-1 p-12 md:p-24 lg:p-32 lg:text-right flex flex-col lg:items-end">
+<div class="flex gap-4 mb-6">
+<span class="px-3 py-1 liquid-glass rounded-full text-[10px] uppercase tracking-widest text-white">Data Viz</span>
+<span class="px-3 py-1 liquid-glass rounded-full text-[10px] uppercase tracking-widest text-white">Web3</span>
+</div>
+<h3 class="font-serif-italic text-5xl text-white mb-6 italic">Ethereal Flux</h3>
+<p class="text-on-surface-variant font-light mb-8 text-lg leading-relaxed max-w-md">
+                        Real-time visualization of global data markets, transforming complex liquidity flows into a "Liquid Glass" dashboard for institutional traders.
+                    </p>
+<button class="flex items-center gap-2 text-white group">
+<span class="text-sm font-medium tracking-widest uppercase border-b border-white/20 pb-1">Explore Case Study</span>
+<span class="material-symbols-outlined transition-transform group-hover:-translate-x-2 rotate-180">arrow_forward</span>
+</button>
+</div>
+<div class="order-1 lg:order-2 w-full h-full overflow-hidden">
+<div class="aspect-[16/10] lg:aspect-auto lg:h-[819px] bg-surface-container-low transition-transform duration-1000 hover:scale-105">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxhok5OxVoXRIgqSZTa7sTMeHeosS7vN3sbxCrq471fpE77ATYHVXKS5-Ao_YeOLwUe7TOdTItKLEtYhKpJeWX49XfudRrVTCkVXolpleJroYK3gwApSoB2lG0o0RiGBScjhwim8-F9nE-wx-UDsJAlsXNJuT_ekS3Wp1kdfoLtu52JXpWrfduzmhLwixYUdiUngFkJ2nJSFXxGR_AWd1_AztzzHshSWT5bcfIOqym3eJl8TkGmX98z7GC2pM442JmPFjNyRaI_xA"/>
+</div>
+</div>
+</div>
+</section>
+<section class="py-48 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-24 text-center max-w-3xl mx-auto">
+<h2 class="font-serif-italic text-5xl md:text-7xl text-white mb-6 italic">The difference is everything</h2>
+<p class="text-on-surface-variant font-light text-xl">Precision at every level. We don't settle for "good enough" when the goal is extraordinary.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-white/5">
+<div class="bg-black p-12 hover:bg-surface-container transition-colors group">
+<span class="material-symbols-outlined text-4xl text-white mb-8 group-hover:scale-110 transition-transform inline-block">auto_awesome</span>
+<h4 class="text-white text-xl mb-4">AI Integration</h4>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Native LLM implementation that feels intuitive, not intrusive.</p>
+</div>
+<div class="bg-black p-12 hover:bg-surface-container transition-colors group">
+<span class="material-symbols-outlined text-4xl text-white mb-8 group-hover:scale-110 transition-transform inline-block">blur_on</span>
+<h4 class="text-white text-xl mb-4">Glass Morphism</h4>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Proprietary layering techniques for unparalleled depth and texture.</p>
+</div>
+<div class="bg-black p-12 hover:bg-surface-container transition-colors group">
+<span class="material-symbols-outlined text-4xl text-white mb-8 group-hover:scale-110 transition-transform inline-block">speed</span>
+<h4 class="text-white text-xl mb-4">Performance</h4>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Zero-bloat code architecture ensuring sub-second load times.</p>
+</div>
+<div class="bg-black p-12 hover:bg-surface-container transition-colors group">
+<span class="material-symbols-outlined text-4xl text-white mb-8 group-hover:scale-110 transition-transform inline-block">stylus_note</span>
+<h4 class="text-white text-xl mb-4">Editorial Polish</h4>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Typography-first design that honors the art of digital storytelling.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="relative py-64 overflow-hidden">
+<video autoplay="" class="absolute inset-0 w-full h-full object-cover desaturated-video opacity-40" loop="" muted="" playsinline="">
+<source src="https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM/medium.mp4" type="video/mp4"/>
+</video>
+<div class="absolute inset-0 bg-black/70"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+<div>
+<div class="font-serif-italic text-7xl text-white mb-2">98%</div>
+<div class="text-xs uppercase tracking-[0.3em] text-outline">Accuracy Rate</div>
+</div>
+<div>
+<div class="font-serif-italic text-7xl text-white mb-2">12k+</div>
+<div class="text-xs uppercase tracking-[0.3em] text-outline">Hours Crafted</div>
+</div>
+<div>
+<div class="font-serif-italic text-7xl text-white mb-2">24</div>
+<div class="text-xs uppercase tracking-[0.3em] text-outline">Awards Won</div>
+</div>
+<div>
+<div class="font-serif-italic text-7xl text-white mb-2">1.2s</div>
+<div class="text-xs uppercase tracking-[0.3em] text-outline">Avg Load Time</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-48 bg-black">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="font-serif-italic text-5xl md:text-7xl text-white mb-32 text-center">Words from Partners</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+<div class="liquid-glass p-12 rounded-2xl md:-translate-y-12">
+<div class="flex gap-1 mb-8">
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white italic text-xl leading-relaxed mb-12">"Yash doesn't just build websites; he builds atmospheres. Our conversion rate tripled after the relaunch."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFMBLkEinsP-pFfrr7U_xneNYHtQLX1FKuWUNZnu96Xli7209ir8Km1_3Qwmd0MDiXir0qrdE0PhlvASVaPXAhV5RS6Z8Rz3uoaOVOqgw243QoPgOQ9SYZevbNKeWRhXjRPa0YaygB0oJ6PApqsm6neCPNzQ6wVs7fVrlRlyKJ6_49Mwxr2J_8aDB4fquedQLffcRqCfVjx9EmsmavxwL_z3csqlc-IR6zT6PQEkCyCJj72GwNOlv9NLyuYkeq9bfp-gjrU3cy2-c"/>
+</div>
+<div>
+<div class="text-white text-sm font-medium">Elena Vance</div>
+<div class="text-outline text-xs tracking-widest uppercase">CEO, Lumina</div>
+</div>
+</div>
+</div>
+<div class="liquid-glass p-12 rounded-2xl md:translate-y-8 min-h-[450px] flex flex-col justify-between">
+<div>
+<div class="flex gap-1 mb-8">
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white italic text-xl leading-relaxed mb-12">"The attention to detail is obsessive. Every transition, every blur, every pixel is intentional. Truly world-class craftsmanship."</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeEo1WV6F5esrRWsAmiA5e_dGrS1puxS2Bif4pk6HG98ceDyyBsmzFyHCQno827dPW3oH3Sg-GSYB1tjuok1XmHDZsMxh_3npjO60rvCmagSiVBsqStVbYbrhSghmVOxN9p1rn8gwIBOIpC8v1WPySQWVqsrtlQP6gNh3CtTdJkiXpZp4ddp06AVre3JqjZ17yCRRLWbzxqY3typEd4x8ycvC4_GZlLNKOPBv2w1cuR2d3o3eYwTvfcSun6Etv_okxlMAX2ZaIdUE"/>
+</div>
+<div>
+<div class="text-white text-sm font-medium">Marcus Chen</div>
+<div class="text-outline text-xs tracking-widest uppercase">Founder, Nexus</div>
+</div>
+</div>
+</div>
+<div class="liquid-glass p-12 rounded-2xl md:translate-x-6 md:-translate-y-6">
+<div class="flex gap-1 mb-8">
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white italic text-xl leading-relaxed mb-12">"An artist with a deep technical backbone. Exactly what the next generation of AI needs."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6hq9IiZlnzbrmxDFQg5OwE_rAorae3IYw3uestj63IWPA36-qzf4mFjWFYHHmjZVxHka1QnCbfmZlTTVti2eRoZITClpwX8z1Tm5U5yG17L2MjFwhTX7BqNmhxqWRtK1FcpCx9qoKTbxUZE2scG4pn1sQP68Rl2nRHPQFHEVHZAXlAHo8Wp1OVsQVUiGRzGm0h2esGB2RhIN1sLFny3uv42t7f4QEUUXxuQpHOFBROJkuRKWb9jsWuyRh8TsNnLSm_ip5OUBupWE"/>
+</div>
+<div>
+<div class="text-white text-sm font-medium">David Ha</div>
+<div class="text-outline text-xs tracking-widest uppercase">Creative Director, OpenAI</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative py-64 bg-black overflow-hidden">
+<video autoplay="" class="absolute inset-0 w-full h-full object-cover opacity-30" loop="" muted="" playsinline="">
+<source src="https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q/medium.mp4" type="video/mp4"/>
+</video>
+<div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 text-center">
+<h2 class="font-serif-italic text-7xl md:text-9xl text-white mb-12 leading-tight">Let's build the <br/>exceptional.</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+<button class="bg-white text-black px-12 py-5 rounded-full font-medium hover:scale-105 transition-transform text-lg">
+                        Secure a Slot
+                    </button>
+<a class="text-white flex items-center gap-4 group" href="mailto:hello@yashharwani.com">
+<span class="text-xl">hello@yashharwani.com</span>
+<span class="material-symbols-outlined p-4 liquid-glass rounded-full group-hover:bg-white/10 transition-colors">north_east</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-black w-full relative overflow-hidden">
+<div class="w-full max-w-7xl mx-auto px-8 py-20 flex flex-col items-center gap-12">
+<div class="text-2xl font-serif-italic italic text-white">Yash Harwani</div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="text-gray-500 hover:text-white transition-colors tracking-wide font-light text-sm" href="#">Privacy Policy</a>
+<a class="text-gray-500 hover:text-white transition-colors tracking-wide font-light text-sm" href="#">Terms of Service</a>
+<a class="text-gray-500 hover:text-white transition-colors tracking-wide font-light text-sm" href="#">LinkedIn</a>
+<a class="text-gray-500 hover:text-white transition-colors tracking-wide font-light text-sm" href="#">GitHub</a>
+</div>
+<div class="text-gray-400 font-light tracking-wide text-xs">© 2024 Yash Harwani. All rights reserved.</div>
+</div>
+</footer>
+
+</body></html>
